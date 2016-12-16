@@ -241,7 +241,7 @@ namespace _1988wj.GoodsCode
 
                 //[单价]
                 单价 = dataReader[单价列].ToString().Trim();
-                if (double.TryParse(单价, out double result))
+                if (!decimal.TryParse(单价, out decimal result))
                 {
                     单价 = "0";
                 }
